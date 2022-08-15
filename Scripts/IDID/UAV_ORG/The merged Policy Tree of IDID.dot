@@ -1,0 +1,23 @@
+// TThe merged Policy Tree of IDID
+digraph {
+	mod_1_37 [label=Move_North]
+	mod_1_36 [label=Move_West]
+	mod_1_25 [label=Listen]
+	mod_1_57 [label=Listen]
+	mod_1_46 [label=Listen]
+	mod_1_62 [label=Move_North]
+	mod_1_3 [label=Listen]
+	mod_1_67 [label=Move_North]
+	mod_1_36 -> mod_1_37 [label="*"]
+	mod_1_25 -> mod_1_57 [label=Sense_North]
+	mod_1_25 -> mod_1_36 [label="Sense_South|Sense_Level"]
+	mod_1_25 -> mod_1_62 [label=Found]
+	mod_1_57 -> mod_1_37 [label="*"]
+	mod_1_46 -> mod_1_57 [label="Sense_North|Sense_South|Sense_Level"]
+	mod_1_46 -> mod_1_62 [label=Found]
+	mod_1_62 -> mod_1_37 [label="*"]
+	mod_1_3 -> mod_1_67 [label="Sense_North|Found"]
+	mod_1_3 -> mod_1_25 [label=Sense_South]
+	mod_1_3 -> mod_1_46 [label=Sense_Level]
+	mod_1_67 -> mod_1_62 [label="*"]
+}

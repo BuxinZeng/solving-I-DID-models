@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="S3">
+			<state id="TL" />
+			<state id="TR" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="O3">
+			<state id="GLCL" />
+			<state id="GLCR" />
+			<state id="GLS" />
+			<state id="GRCL" />
+			<state id="GRCR" />
+			<state id="GRS" />
+			<parents>S3</parents>
+			<probabilities>0.2055555555555556 0.20555556 0.20555556 0.1277777777777778 0.12777778 0.12777778 0.12777778 0.12777778 0.12777778 0.20555556 0.20555556 0.20555556</probabilities>
+		</cpt>
+		<cpt id="SMOD3">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>S3</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<deterministic id="D3">
+			<state id="OL" />
+			<state id="OR" />
+			<state id="L" />
+			<parents>SMOD3</parents>
+			<resultingstates>L L</resultingstates>
+		</deterministic>
+		<cpt id="MOD3">
+			<state id="mod_0_3" />
+			<state id="mod_1_8" />
+			<state id="mod_3_11" />
+			<state id="mod_5_12" />
+			<state id="mod_7_14" />
+			<parents>S3</parents>
+			<probabilities>0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2</probabilities>
+		</cpt>
+		<deterministic id="OD3">
+			<state id="OL" />
+			<state id="OR" />
+			<state id="L" />
+			<parents>MOD3</parents>
+			<resultingstates>L L L L L</resultingstates>
+		</deterministic>
+		<cpt id="S2">
+			<state id="TL" />
+			<state id="TR" />
+			<parents>S3 D3 OD3</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 1 0 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0 1</probabilities>
+		</cpt>
+		<cpt id="O2">
+			<state id="GLCL" />
+			<state id="GLCR" />
+			<state id="GLS" />
+			<state id="GRCL" />
+			<state id="GRCR" />
+			<state id="GRS" />
+			<parents>S2 D3 OD3</parents>
+			<probabilities>0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.7650000000000001 0.04250000000000001 0.04250000000000001 0.135 0.007500000000000001 0.007500000000000001 0.04250000000000001 0.7650000000000001 0.04250000000000001 0.007500000000000001 0.135 0.007500000000000001 0.04250000000000001 0.04250000000000001 0.7650000000000001 0.007500000000000001 0.007500000000000001 0.135 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.135 0.0075 0.0075 0.765 0.0425 0.0425 0.0075 0.135 0.0075 0.0425 0.765 0.0425 0.0075 0.0075 0.135 0.0425 0.0425 0.765</probabilities>
+		</cpt>
+		<cpt id="SMOD2">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>SMOD3 O2</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<deterministic id="D2">
+			<state id="OL" />
+			<state id="OR" />
+			<state id="L" />
+			<parents>SMOD2</parents>
+			<resultingstates>L L</resultingstates>
+		</deterministic>
+		<cpt id="OO2">
+			<state id="GL" />
+			<state id="GR" />
+			<parents>S2 OD3</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.85 0.15 0.5 0.5 0.5 0.5 0.15 0.85</probabilities>
+		</cpt>
+		<cpt id="MOD2">
+			<state id="mod_0_7" />
+			<state id="mod_5_13" />
+			<state id="mod_7_15" />
+			<state id="mod_7_18" />
+			<state id="mod_8_18" />
+			<state id="mod_9_18" />
+			<parents>MOD3 OO2</parents>
+			<probabilities>0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 1 0 0</probabilities>
+		</cpt>
+		<deterministic id="OD2">
+			<state id="OL" />
+			<state id="OR" />
+			<state id="L" />
+			<parents>MOD2</parents>
+			<resultingstates>L L L OL L L</resultingstates>
+		</deterministic>
+		<cpt id="S1">
+			<state id="TL" />
+			<state id="TR" />
+			<parents>S2 D2 OD2</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 1 0 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0 1</probabilities>
+		</cpt>
+		<cpt id="O1">
+			<state id="GLCL" />
+			<state id="GLCR" />
+			<state id="GLS" />
+			<state id="GRCL" />
+			<state id="GRCR" />
+			<state id="GRS" />
+			<parents>S1 D2 OD2</parents>
+			<probabilities>0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.7650000000000001 0.04250000000000001 0.04250000000000001 0.135 0.007500000000000001 0.007500000000000001 0.04250000000000001 0.7650000000000001 0.04250000000000001 0.007500000000000001 0.135 0.007500000000000001 0.04250000000000001 0.04250000000000001 0.7650000000000001 0.007500000000000001 0.007500000000000001 0.135 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.1666666666666667 0.135 0.0075 0.0075 0.765 0.0425 0.0425 0.0075 0.135 0.0075 0.0425 0.765 0.0425 0.0075 0.0075 0.135 0.0425 0.0425 0.765</probabilities>
+		</cpt>
+		<cpt id="SMOD1">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>SMOD2 O1</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<deterministic id="D1">
+			<state id="OL" />
+			<state id="OR" />
+			<state id="L" />
+			<parents>SMOD1</parents>
+			<resultingstates>L L</resultingstates>
+		</deterministic>
+		<utility id="U3">
+			<parents>S3 D3 OD3</parents>
+			<utilities>-100 -100 -100 10 10 10 -1 -1 -1 10 10 10 -100 -100 -100 -1 -1 -1</utilities>
+		</utility>
+		<utility id="U2">
+			<parents>S2 D2 OD2</parents>
+			<utilities>-100 -100 -100 10 10 10 -1 -1 -1 10 10 10 -100 -100 -100 -1 -1 -1</utilities>
+		</utility>
+		<cpt id="OO1">
+			<state id="GL" />
+			<state id="GR" />
+			<parents>S1 OD2</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.85 0.15 0.5 0.5 0.5 0.5 0.15 0.85</probabilities>
+		</cpt>
+		<cpt id="MOD1">
+			<state id="mod_3_17" />
+			<state id="mod_5_17" />
+			<state id="mod_7_19" />
+			<parents>MOD2 OO1</parents>
+			<probabilities>0 0 1 1 0 0 0 1 0 0 1 0 1 0 0 1 0 0 0 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 0 1</probabilities>
+		</cpt>
+		<deterministic id="OD1">
+			<state id="OL" />
+			<state id="OR" />
+			<state id="L" />
+			<parents>MOD1</parents>
+			<resultingstates>OL OR L</resultingstates>
+		</deterministic>
+		<utility id="U1">
+			<parents>S1 D1 OD1</parents>
+			<utilities>-100 -100 -100 10 10 10 -1 -1 -1 10 10 10 -100 -100 -100 -1 -1 -1</utilities>
+		</utility>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 1.6.3" name="Network1">
+			<node id="S3">
+				<name>S3</name>
+				<interior color="ffff99" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>433 418 505 467</position>
+			</node>
+			<node id="O3">
+				<name>O3</name>
+				<interior color="ccffff" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>442 583 497 619</position>
+			</node>
+			<node id="D3">
+				<name>D3</name>
+				<interior color="ff99cc" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>538 495 588 531</position>
+				<barchart width="128" height="80">
+				</barchart>
+			</node>
+			<node id="MOD3">
+				<name>MOD3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>531 139 587 177</position>
+			</node>
+			<node id="OD3">
+				<name>OD3</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>531 220 587 258</position>
+			</node>
+			<node id="S2">
+				<name>S2</name>
+				<interior color="ffff99" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>638 418 710 467</position>
+			</node>
+			<node id="O2">
+				<name>O2</name>
+				<interior color="ccffff" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>647 583 702 619</position>
+			</node>
+			<node id="D2">
+				<name>D2</name>
+				<interior color="ff99cc" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>744 495 794 531</position>
+				<barchart width="128" height="80">
+				</barchart>
+			</node>
+			<node id="OO2">
+				<name>OO2</name>
+				<interior color="ccffff" />
+				<outline color="ff00ff" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>647 301 702 337</position>
+			</node>
+			<node id="MOD2">
+				<name>MOD2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>737 139 793 177</position>
+			</node>
+			<node id="OD2">
+				<name>OD2</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>737 220 793 258</position>
+			</node>
+			<node id="S1">
+				<name>S1</name>
+				<interior color="ffff99" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>844 418 916 467</position>
+			</node>
+			<node id="O1">
+				<name>O1</name>
+				<interior color="ccffff" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>853 583 908 619</position>
+			</node>
+			<node id="D1">
+				<name>D1</name>
+				<interior color="ff99cc" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>948 495 998 531</position>
+				<barchart width="128" height="80">
+				</barchart>
+			</node>
+			<node id="U3">
+				<name>U3</name>
+				<interior color="00ff00" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>527 344 593 386</position>
+				<barchart width="128" height="80">
+				</barchart>
+			</node>
+			<node id="U2">
+				<name>U2</name>
+				<interior color="00ff00" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>733 344 799 386</position>
+			</node>
+			<node id="OO1">
+				<name>OO1</name>
+				<interior color="ccffff" />
+				<outline color="ff00ff" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>853 301 908 337</position>
+			</node>
+			<node id="MOD1">
+				<name>MOD1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>944 139 1000 177</position>
+			</node>
+			<node id="OD1">
+				<name>OD1</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>944 220 1000 258</position>
+			</node>
+			<node id="U1">
+				<name>U1</name>
+				<interior color="00ff00" />
+				<outline color="000000" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>940 344 1006 386</position>
+			</node>
+			<node id="SMOD3">
+				<name>SMOD3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>538 407 588 443</position>
+			</node>
+			<node id="SMOD2">
+				<name>SMOD2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>744 407 794 443</position>
+			</node>
+			<node id="SMOD1">
+				<name>SMOD1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>948 407 998 443</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
