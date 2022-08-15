@@ -1,1 +1,1 @@
-# solving-I-DID-models
+# A multi-population genetic algorithm for solving I-DID models
